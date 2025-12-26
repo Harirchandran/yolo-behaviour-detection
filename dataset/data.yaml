@@ -1,0 +1,12 @@
+# Delete the 'path' line entirely to avoid confusion. 
+# We will use relative paths for train/val/test
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 4
+names:
+- helmet
+- without_helmet
+- alcohol
+- ciggaret

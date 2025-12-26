@@ -1,0 +1,41 @@
+# YOLO Behaviour Detection - Requirements
+# Install with: pip install -r requirements.txt
+
+# ====================
+# Core ML Framework
+# ====================
+ultralytics>=8.0.0          # YOLOv8 framework
+torch>=2.0.0                # PyTorch
+torchvision>=0.15.0         # PyTorch vision utilities
+
+# ====================
+# Image Processing
+# ====================
+opencv-python>=4.8.0        # Image/video processing
+Pillow>=10.0.0              # Image handling
+
+# ====================
+# Data & Analysis
+# ====================
+numpy>=1.24.0               # Numerical operations
+pandas>=2.0.0               # Data manipulation
+matplotlib>=3.7.0           # Plotting (for training graphs)
+seaborn>=0.12.0             # Statistical visualization
+
+# ====================
+# Demo Application
+# ====================
+streamlit>=1.28.0           # Web demo app
+
+# ====================
+# Utilities
+# ====================
+tqdm>=4.65.0                # Progress bars
+PyYAML>=6.0                 # YAML parsing
+requests>=2.31.0            # HTTP requests (for model downloads)
+
+# ====================
+# Optional - For GPU Training
+# ====================
+# Uncomment and adjust based on your CUDA version:
+# torch==2.0.0+cu118 --extra-index-url https://download.pytorch.org/whl/cu118

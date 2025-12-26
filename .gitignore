@@ -1,0 +1,133 @@
+# ===========================
+# YOLO Behaviour Detection
+# .gitignore
+# ===========================
+
+# --------------------------
+# Python
+# --------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --------------------------
+# Virtual Environments
+# --------------------------
+.conda/
+.venv/
+venv/
+ENV/
+env/
+.env
+
+# --------------------------
+# IDE / Editors
+# --------------------------
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# --------------------------
+# OS Generated Files
+# --------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# --------------------------
+# Large Files (Git LFS or exclude)
+# --------------------------
+# Pretrained weights (can be downloaded)
+yolov8n.pt
+yolov8s.pt
+yolov8m.pt
+yolo11n.pt
+
+# Dataset zip archive
+*.zip
+
+# --------------------------
+# Training Artifacts
+# --------------------------
+# Keep runs/detect/*/weights/best.pt only if needed
+runs/
+!runs/detect/
+!runs/detect/final_helmet_run/
+!runs/detect/final_helmet_run/weights/
+!runs/detect/final_helmet_run/weights/best.pt
+
+# Tensorboard logs
+logs/
+events.out.tfevents.*
+
+# --------------------------
+# Temporary / Debug Files
+# --------------------------
+# Progress tracking files
+*_progress.json
+cleaner_progress.json
+editor_progress.json
+
+# Verification outputs (regenerable)
+verification_output/
+dataset_visualized/
+dataset_latest_VISUALIZED/
+
+# --------------------------
+# Jupyter Notebooks
+# --------------------------
+.ipynb_checkpoints/
+# Keep notebooks/ folder but ignore checkpoints
+
+# --------------------------
+# Dataset (Excluded - download from Kaggle)
+# --------------------------
+# Dataset is available on Kaggle - see notebooks/training_colab.ipynb
+# or dataset/README.md for download instructions
+#
+dataset/train/
+dataset/valid/
+dataset/test/
+
+# --------------------------
+# Model Outputs
+# --------------------------
+# Exclude all weights except the ones in models/
+*.pt
+!models/best.pt
+!models/best_colab.pt
+!models/last.pt
+
+# --------------------------
+# Logs
+# --------------------------
+*.log
+*.out
+nohup.out
