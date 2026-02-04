@@ -4,9 +4,17 @@
 # ====================
 # Core ML Framework
 # ====================
+--extra-index-url https://download.pytorch.org/whl/cu124
+
+# ====================
+# Core ML Framework
+# ====================
 ultralytics>=8.0.0          # YOLOv8 framework
-torch==2.0.0+cu131 --extra-index-url https://download.pytorch.org/whl/cu131  # PyTorch with GPU support (CUDA 13.1)
-torchvision==0.15.0+cu131 --extra-index-url https://download.pytorch.org/whl/cu131  # PyTorch vision utilities with GPU
+# GPU-enabled PyTorch wheels
+# The index URL above ensures we get the CUDA versions
+torch>=2.0.0               # PyTorch (GPU-enabled)
+torchvision>=0.15.0        # torchvision (GPU-enabled)
+torchaudio>=2.0.0          # torchaudio (GPU-enabled)
 
 # ====================
 # Image Processing

@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 import os
 from datetime import datetime
+import torch
 
 # ---------------------------
 # CONFIGURATION
@@ -92,7 +93,8 @@ def run_detection(img_bgr, conf_threshold):
     Runs inference on a single frame and returns annotated image + metadata.
     """
     # Run YOLO inference
-    results = model(img_bgr, conf=conf_threshold)[0]
+    device = 0 if torch.cuda.is_available() else 'cpu'
+    results = model(img_bgr, conf=conf_threshold, device=device)[0]
 
     detections = []
     # Plot predictions on the image

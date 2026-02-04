@@ -6,7 +6,7 @@ if __name__ == '__main__':
     # We use 'yolov8n.pt' (Nano) for speed. 
     # If you have a powerful GPU (RTX 3060 or better), you can change this to 'yolov8s.pt' (Small) for better accuracy.
     print("--- Initializing Model ---")
-    model = YOLO('yolov8n.pt') 
+    model = YOLO('models/yolov8n.pt') 
 
     # 2. Check Device (Optional visual check)
     device_name = 'GPU (Cuda)' if torch.cuda.is_available() else 'CPU'
@@ -26,6 +26,7 @@ if __name__ == '__main__':
         
         # Augmentation settings (Standard YOLOv8 defaults are usually best, but we ensure they are active)
         mosaic=1.0,                       # Helps learn small objects like 'ciggaret' by stitching images together.
+        device=0,                         # Force GPU usage
     )
 
     print("--- Training Complete! ---")
